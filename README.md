@@ -1,17 +1,16 @@
-ARMv8 Performance Counters management module
+Prime+Reset
 ==========================================
 
-This module allows user to control access to ARMv8 PMU counters from userspace.
+We should first extend a kernel module. This module allows user to control access to ARMv8 PMU counters from userspace.
 
 It was initially created just for enabling userspace access to *Performance Monitors Cycle Count Register* (**PMCCNTR_EL0**) for use in dataplane software such as [DPDK](http://dpdk.org/dev/patchwork/patch/15225/) framework. It has been later extended to provide a general purpose interface for managing ARMv8 PMU counters.
 
 Further adding support to enable/disable user mode access to Counter Timer Kernel Control register.
 
-## Compilation
+## Kernel Extension Compilation
 
 ```sh
-git clone https://github.com/jerinjacobk/armv8_pmu_cycle_counter_el0
-cd armv8_pmu_cycle_counter_el0
+cd kernel_module
 # If compiling natively on ARMv8 host
 make
 # If cross compiling pass arguments as make arguments, not env vars
