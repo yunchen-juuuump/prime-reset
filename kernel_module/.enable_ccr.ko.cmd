@@ -1,0 +1,1 @@
+cmd_/root/arm_prefetcher/kernel_module/enable_ccr.ko := ld -r  -EL  -maarch64elf -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds  --build-id  -o /root/arm_prefetcher/kernel_module/enable_ccr.ko /root/arm_prefetcher/kernel_module/enable_ccr.o /root/arm_prefetcher/kernel_module/enable_ccr.mod.o ;  true

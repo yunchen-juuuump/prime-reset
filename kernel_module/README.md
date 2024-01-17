@@ -146,21 +146,3 @@ To add support for managing a new counter, developer should do the following:
         return ret;
     }
     ```
-5. Compile Reverse-Engineering Benchmarks
-```sh
-gcc -O0 <TARGET_FEATURE>.c
-```
-
-6. Test Prime+Reset:
-```sh
-make NO_REST
-```
-This will show the memory latency when the prefetcher status is not reset
-```sh
-make RESET
-```
-This will show the memory latency when the prefetcher status is reset
-```sh
-make CACHE
-```
-This will show the cached date latency when the prefetcher status is reset
